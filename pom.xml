@@ -321,7 +321,7 @@
       -->
     </dependencies>
   </dependencyManagement>
-  <profiles>
+<!--   <profiles>
     <profile>
         <id>sonatype-oss-release</id>
         <build>
@@ -342,7 +342,7 @@
           </plugins>
       </build>
     </profile>
-    <profile>
+    <profile> -->
       <!--
           Passes JDK 11-12-specific `no-module-directories` flag to Javadoc tool,
           which is required to make symbol search work correctly in the generated
