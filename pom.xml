@@ -267,7 +267,7 @@
       </plugins>
     </pluginManagement>
   </build>
-  <distributionManagement>
+<!--   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
       <name>Sonatype Nexus Snapshots</name>
@@ -283,7 +283,7 @@
       <name>Guava Documentation Site</name>
       <url>scp://dummy.server/dontinstall/usestaging</url>
     </site>
-  </distributionManagement>
+  </distributionManagement> -->
   <dependencyManagement>
     <dependencies>
       <dependency>
