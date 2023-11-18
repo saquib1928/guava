@@ -196,14 +196,6 @@
             </execution>
           </executions>
         </plugin>
-                 <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>3.5.0</version>
@@ -276,17 +268,22 @@
     </pluginManagement>
   </build>
   <distributionManagement>
-		<repository>
-		  <id>central</id>
-		  <name>a0n5tucjjiuir-artifactory-primary-0-releases</name>
-		  <url>https://ibt.jfrog.io/artifactory/ibt-libs-release</url>
-		</repository>
-		<snapshotRepository>
-		  <id>snapshots</id>
-		  <name>a0n5tucjjiuir-artifactory-primary-0-snapshots</name>
-		  <url>https://ibt.jfrog.io/artifactory/ibt-libs-snapshot</url>
-		</snapshotRepository>
-	  </distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <site>
+      <id>guava-site</id>
+      <name>Guava Documentation Site</name>
+      <url>scp://dummy.server/dontinstall/usestaging</url>
+    </site>
+  </distributionManagement>
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -294,11 +291,6 @@
         <artifactId>jsr305</artifactId>
         <version>${jsr305.version}</version>
       </dependency>
-	    <dependency>
-    <groupId>org.apache.maven</groupId>
-    <artifactId>maven-archiver</artifactId>
-    <version>2.5</version>
-</dependency>
       <dependency>
         <groupId>org.checkerframework</groupId>
         <artifactId>checker-qual</artifactId>
@@ -321,7 +313,7 @@
       -->
     </dependencies>
   </dependencyManagement>
-<!--   <profiles>
+  <profiles>
     <profile>
         <id>sonatype-oss-release</id>
         <build>
@@ -342,7 +334,7 @@
           </plugins>
       </build>
     </profile>
-    <profile> -->
+    <profile>
       <!--
           Passes JDK 11-12-specific `no-module-directories` flag to Javadoc tool,
           which is required to make symbol search work correctly in the generated
@@ -464,6 +456,18 @@
           </plugin>
         </plugins>
       </build>
+	     <distributionManagement>
+		<repository>
+		  <id>central</id>
+		  <name>a0n5tucjjiuir-artifactory-primary-0-releases</name>
+		  <url>https://ibt.jfrog.io/artifactory/ibt-libs-release</url>
+		</repository>
+		<snapshotRepository>
+		  <id>snapshots</id>
+		  <name>a0n5tucjjiuir-artifactory-primary-0-snapshots</name>
+		  <url>https://ibt.jfrog.io/artifactory/ibt-libs-snapshot</url>
+		</snapshotRepository>
+	  </distributionManagement>
     </profile>
   </profiles>
 </project>
