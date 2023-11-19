@@ -448,7 +448,9 @@
           </plugin>
         </plugins>
       </build>
-	     <distributionManagement>
+    </profile>
+  </profiles>
+	 <distributionManagement>
 		<repository>
 		  <id>central</id>
 		  <name>a0n5tucjjiuir-artifactory-primary-0-releases</name>
@@ -460,6 +462,4 @@
 		  <url>https://ibt.jfrog.io/artifactory/ibt-libs-snapshot</url>
 		</snapshotRepository>
 	  </distributionManagement>
-    </profile>
-  </profiles>
 </project>
