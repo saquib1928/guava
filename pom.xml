@@ -31,6 +31,9 @@
     <otherVariant.version>HEAD-android-SNAPSHOT</otherVariant.version>
     <otherVariant.jvmEnvironment>android</otherVariant.jvmEnvironment>
     <otherVariant.jvmEnvironmentVariantName>android</otherVariant.jvmEnvironmentVariantName>
+    <sonar.organization>saquib1928</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.projectKey>saquib1928_test</sonar.projectKey>
   </properties>
   <issueManagement>
     <system>GitHub Issues</system>
