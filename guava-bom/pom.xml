@@ -17,7 +17,19 @@
     <version>9</version>
     <relativePath></relativePath>
   </parent>
-
+<distributionManagement>
+		<repository>
+		  <id>central</id>
+		  <name>a0n5tucjjiuir-artifactory-primary-0-releases</name>
+		  <url>https://ibt.jfrog.io/artifactory/ibt-libs-release</url>
+		</repository>
+		<snapshotRepository>
+		  <id>snapshots</id>
+		  <name>a0n5tucjjiuir-artifactory-primary-0-snapshots</name>
+		  <url>https://ibt.jfrog.io/artifactory/ibt-libs-snapshot</url>
+		</snapshotRepository>
+	  </distributionManagement>
+  
   <name>Guava BOM</name>
   <description>BOM for Guava artifacts</description>
   <url>https://github.com/google/guava</url>
